@@ -2,6 +2,7 @@ import model.Customer;
 import model.SavingsAccount;
 import model.InvestmentAccount;
 import model.ChequeAccount;
+import controller.LoginController;
 
 public class Main {
 
@@ -9,7 +10,7 @@ public class Main {
 
         Customer customer =
                 new Customer(
-                        " Letso Olga",
+                        "Letso Olga",
                         "Mosarwa",
                         "Lobatse",
                         "74730087"
@@ -58,6 +59,20 @@ public class Main {
         System.out.println(
                 "Cheque Balance: " +
                 cheque.getBalance()
+        );
+
+        LoginController loginController =
+                new LoginController();
+
+        boolean result =
+                loginController.login(
+                        "admin",
+                        "1234"
+                );
+
+        System.out.println(
+                "Login Result: " +
+                result
         );
     }
 }
