@@ -1,3 +1,4 @@
+package model;
 public class ChequeAccount extends Account {
 
     private String companyName;
@@ -26,4 +27,11 @@ public class ChequeAccount extends Account {
             System.out.println("Insufficient funds.");
         }
     }
+    public String getCompanyName() {
+    return companyName;
+}
+
+public String getCompanyAddress() {
+    return companyAddress;
+}
 }

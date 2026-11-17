@@ -1,3 +1,5 @@
+package model;
+
 public class InvestmentAccount extends Account {
 
     public InvestmentAccount(String accountNumber,

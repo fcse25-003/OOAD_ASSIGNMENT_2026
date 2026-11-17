@@ -24,7 +24,7 @@ public class Main {
         account.deposit(500);
 
         System.out.println(
-                "Balance = " +
+                "Balance: " +
                 account.getBalance()
         );
     }

@@ -1,3 +1,5 @@
+package model;
+
 public interface AccountOps {
 
     void deposit(double amount);
