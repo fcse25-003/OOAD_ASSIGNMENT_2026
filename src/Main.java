@@ -6,6 +6,9 @@ import controller.LoginController;
 import controller.AccountController;
 import dao.CustomerDAO;
 import dao.AccountDAO;
+import view.LoginView;
+import view.AccountView;
+import view.RegisterView;
 
 public class Main {
 
@@ -98,6 +101,20 @@ AccountDAO accountDAO =
         new AccountDAO();
 
 accountDAO.save(savings);
+LoginView loginView =
+        new LoginView();
+
+loginView.display();
+
+RegisterView registerView =
+        new RegisterView();
+
+registerView.display();
+
+AccountView accountView =
+        new AccountView();
+
+accountView.display();
 
     }
 }

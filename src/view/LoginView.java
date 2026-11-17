@@ -1,23 +1,19 @@
 package view;
 
-import controller.LoginController;
-
 public class LoginView {
 
-    private LoginController controller;
+    public void display() {
 
-    public LoginView() {
-        controller = new LoginController();
-    }
+        System.out.println(
+                "========== LOGIN =========="
+        );
 
-    public void login(String username, String password) {
+        System.out.println(
+                "Username:"
+        );
 
-        boolean result = controller.login(username, password);
-
-        if(result) {
-            System.out.println("Access Granted");
-        } else {
-            System.out.println("Access Denied");
-        }
+        System.out.println(
+                "Password:"
+        );
     }
 }

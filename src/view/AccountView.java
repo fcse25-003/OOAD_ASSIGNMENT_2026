@@ -1,30 +1,27 @@
 package view;
 
-import controller.AccountController;
-import model.Account;
-
 public class AccountView {
 
-    private AccountController controller;
+    public void display() {
 
-    public AccountView() {
-        controller = new AccountController();
-    }
+        System.out.println(
+                "========== ACCOUNT MENU =========="
+        );
 
-    public void deposit(Account account,
-                        double amount) {
+        System.out.println(
+                "1. Deposit"
+        );
 
-        controller.deposit(account, amount);
-    }
+        System.out.println(
+                "2. Withdraw"
+        );
 
-    public void withdraw(Account account,
-                         double amount) {
+        System.out.println(
+                "3. View Balance"
+        );
 
-        controller.withdraw(account, amount);
-    }
-
-    public void showBalance(Account account) {
-
-        controller.checkBalance(account);
+        System.out.println(
+                "4. Exit"
+        );
     }
 }
