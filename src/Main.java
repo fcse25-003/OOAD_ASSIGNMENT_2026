@@ -1,5 +1,7 @@
 import model.Customer;
 import model.SavingsAccount;
+import model.InvestmentAccount;
+import model.ChequeAccount;
 
 public class Main {
 
@@ -7,13 +9,13 @@ public class Main {
 
         Customer customer =
                 new Customer(
-                        "Letso Olga",
+                        " Letso Olga",
                         "Mosarwa",
                         "Lobatse",
                         "74730087"
                 );
 
-        SavingsAccount account =
+        SavingsAccount savings =
                 new SavingsAccount(
                         "S001",
                         1000,
@@ -21,11 +23,41 @@ public class Main {
                         customer
                 );
 
-        account.deposit(500);
+        InvestmentAccount investment =
+                new InvestmentAccount(
+                        "I001",
+                        2000,
+                        "Lobatse Branch",
+                        customer
+                );
+
+        ChequeAccount cheque =
+                new ChequeAccount(
+                        "C001",
+                        3000,
+                        "Lobatse Branch",
+                        customer,
+                        "BAC",
+                        "Gaborone"
+                );
+
+        savings.deposit(500);
+        investment.deposit(1000);
+        cheque.deposit(500);
 
         System.out.println(
-                "Balance: " +
-                account.getBalance()
+                "Savings Balance: " +
+                savings.getBalance()
+        );
+
+        System.out.println(
+                "Investment Balance: " +
+                investment.getBalance()
+        );
+
+        System.out.println(
+                "Cheque Balance: " +
+                cheque.getBalance()
         );
     }
 }
