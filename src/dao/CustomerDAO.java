@@ -7,7 +7,7 @@ public class CustomerDAO {
     public void save(Customer customer) {
 
         System.out.println(
-                "Customer saved to database"
+                "Customer saved"
         );
     }
 
@@ -22,6 +22,15 @@ public class CustomerDAO {
 
         System.out.println(
                 "Customer deleted"
+        );
+    }
+
+    public void findBySurname(
+            String surname) {
+
+        System.out.println(
+                "Searching customer: "
+                + surname
         );
     }
 }

@@ -7,7 +7,7 @@ public class AccountDAO {
     public void save(Account account) {
 
         System.out.println(
-                "Account saved"
+                "Account saved to database"
         );
     }
 
@@ -22,6 +22,15 @@ public class AccountDAO {
 
         System.out.println(
                 "Account deleted"
+        );
+    }
+
+    public void findByAccountNumber(
+            String accountNumber) {
+
+        System.out.println(
+                "Searching for account: "
+                + accountNumber
         );
     }
 }

@@ -4,6 +4,8 @@ import model.InvestmentAccount;
 import model.ChequeAccount;
 import controller.LoginController;
 import controller.AccountController;
+import dao.CustomerDAO;
+import dao.AccountDAO;
 
 public class Main {
 
@@ -86,6 +88,16 @@ accountController.deposit(
 System.out.println(
         "Updated Savings Balance: "
         + savings.getBalance()
-);       
+);  
+CustomerDAO customerDAO =
+        new CustomerDAO();
+
+customerDAO.save(customer);
+
+AccountDAO accountDAO =
+        new AccountDAO();
+
+accountDAO.save(savings);
+
     }
 }
