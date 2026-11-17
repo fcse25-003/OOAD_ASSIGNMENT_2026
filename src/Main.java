@@ -3,6 +3,7 @@ import model.SavingsAccount;
 import model.InvestmentAccount;
 import model.ChequeAccount;
 import controller.LoginController;
+import controller.AccountController;
 
 public class Main {
 
@@ -74,5 +75,17 @@ public class Main {
                 "Login Result: " +
                 result
         );
+ AccountController accountController =
+        new AccountController();
+
+accountController.deposit(
+        savings,
+        200
+);
+
+System.out.println(
+        "Updated Savings Balance: "
+        + savings.getBalance()
+);       
     }
 }
