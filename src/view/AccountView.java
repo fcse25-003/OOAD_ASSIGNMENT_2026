@@ -5,7 +5,7 @@ public class AccountView {
     public void display() {
 
         System.out.println(
-                "========== ACCOUNT MENU =========="
+                " ACCOUNT MENU "
         );
 
         System.out.println(
